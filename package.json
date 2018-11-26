@@ -4,5 +4,9 @@
   },
   "devDependencies": {
     "mdx-deck": "^1.7.14"
+  },
+  "dependencies": {
+    "file-loader": "^2.0.0",
+    "react-twitter-embed": "^2.0.4"
   }
 }

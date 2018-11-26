@@ -1,3 +1,20 @@
 # React
 16.3 - 16.7(alpha)
 ---
+# Contexto
+(não a API de contexto, contexto mesmo, tipo contextualizar)
+---
+# React 16.0, Fiber, async rendering
+---
+import { TwitterTweetEmbed } from "react-twitter-embed";
+
+<TwitterTweetEmbed
+  tweetId={"909926793536094209"}
+/>
+---
+<img src={require("file-loader!./assets/stack_reconciliation.png")}/>
+<p style={{ fontSize: "0.6em"}}>(Stack reconciliation — é preciso terminar a atualização antes de retornar para a main thread (crédito: Lin Clark))</p>
+---
+<img src={require("file-loader!./assets/fiber_reconciliation.png")}/>
+<p style={{ fontSize: "0.6em"}}>(Fiber reconciliation — as atualizações serão feitas em pedaços (crédito: Lin Clark))</p>
+
