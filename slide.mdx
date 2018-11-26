@@ -6,15 +6,56 @@
 ---
 # React 16.0, Fiber, async rendering
 ---
-import { TwitterTweetEmbed } from "react-twitter-embed";
-
-<TwitterTweetEmbed
-  tweetId={"909926793536094209"}
-/>
----
 <img src={require("file-loader!./assets/stack_reconciliation.png")}/>
 <p style={{ fontSize: "0.6em"}}>(Stack reconciliation — é preciso terminar a atualização antes de retornar para a main thread (crédito: Lin Clark))</p>
 ---
 <img src={require("file-loader!./assets/fiber_reconciliation.png")}/>
 <p style={{ fontSize: "0.6em"}}>(Fiber reconciliation — as atualizações serão feitas em pedaços (crédito: Lin Clark))</p>
+---
+import { TwitterTweetEmbed } from "react-twitter-embed";
 
+<TwitterTweetEmbed
+  tweetId={"909926793536094209"}
+/>
+
+```notes
+Aqui é possível verificar como o circulo de loading no canto superior direito para de ser renderizado enquanto a àrvore de componentes é montada
+```
+---
+# React 16.3
+---
+# Context API
+---
+# createRef API e fowardRef API
+---
+# Novos lifecycles
+---
+# Stric Mode
+---
+# React 16.4
+---
+# React 16.5
+---
+# Profiler
+---
+# React 16.6
+---
+# React.memo
+---
+# Code-Splitting Suspense
+---
+# ContextType
+---
+# React 16.7 (alpha)
+---
+# Hooks
+---
+# O Problema
+---
+# A Solução
+---
+# Concurrent React
+---
+# Time-slicing
+---
+# Suspense
