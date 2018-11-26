@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "start": "mdx-deck slide.mdx"
+  },
+  "devDependencies": {
+    "mdx-deck": "^1.7.14"
+  }
+}
