@@ -85,7 +85,11 @@ Aqui é possível verificar como o circulo de loading no canto superior direito 
 />
 ---
 # Novos lifecycles
-<img src={require("file-loader!./assets/lifecycle.jpg")}/>
+🙅 UNSAFE_componentWillReceiveProps 🙅  
+🙅 UNSAFE_componentWillUpdate  🙅  
+🙅 UNSAFE_componentWillMount  🙅  
+😍 getDerivedStateFromProps  😍  
+😍 getSnapshotBeforeUpdate  😍  
 
 ```notes
 For example, with the current API, it is too easy to block the initial render with non-essential logic. In part this is because there are too many ways to accomplish a given task, and it can be unclear which is best. We’ve observed that the interrupting behavior of error handling is often not taken into consideration and can result in memory leaks (something that will also impact the upcoming async rendering mode). The current class component API also complicates other efforts, like our work on prototyping a React compiler.
@@ -95,7 +99,56 @@ Many of these issues are exacerbated by a subset of the component lifecycles (co
 We are adding the following lifecycle aliases: UNSAFE_componentWillMount, UNSAFE_componentWillReceiveProps, and UNSAFE_componentWillUpdate. (Both the old lifecycle names and the new aliases will be supported.)
 
 We are introducing two new lifecycles, static getDerivedStateFromProps and getSnapshotBeforeUpdate.
+
+getDerivedStateFromProps is being added as a safer alternative to the legacy componentWillReceiveProps. (Note that in most cases you don’t need either of them.)
+getSnapshotBeforeUpdate is being added to support safely reading properties from e.g. the DOM before updates are made.
 ```
+---
+<CodeSurfer
+  title="getDerivedStateFromProps"
+  code={require("!raw-loader!./samples/getDerivedStateFromProps.jsx")}
+  showNumbers={false}
+  dark={false}
+  steps={[
+    {},
+    {range: [7, 15]}
+  ]}
+/>
+
+```notes
+Deriving state leads to verbose code and makes your components difficult to think about.
+Make sure you’re familiar with simpler alternatives:
+
+If you need to perform a side effect (for example, data fetching or an animation) in response to a change in props, use componentDidUpdate lifecycle instead.
+
+If you want to re-compute some data only when a prop changes, use a memoization helper instead.
+
+If you want to “reset” some state when a prop changes, consider either making a component fully controlled or fully uncontrolled with a key instead.
+``` 
+---
+<CodeSurfer
+  title="getSnapshotBeforeUpdate"
+  code={require("!raw-loader!./samples/getSnapshotBeforeUpdate.jsx")}
+  showNumbers={false}
+  dark={false}
+  steps={[
+    {},
+    {range: [7, 13]},
+    {range: [15, 20]}
+  ]}
+/>
+
+```notes
+Deriving state leads to verbose code and makes your components difficult to think about.
+Make sure you’re familiar with simpler alternatives:
+
+If you need to perform a side effect (for example, data fetching or an animation) in response to a change in props, use componentDidUpdate lifecycle instead.
+
+If you want to re-compute some data only when a prop changes, use a memoization helper instead.
+
+If you want to “reset” some state when a prop changes, consider either making a component fully controlled or fully uncontrolled with a key instead.
+``` 
+
 ---
 # Strict Mode
 ---
