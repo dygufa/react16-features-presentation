@@ -6,9 +6,12 @@ const FancyInput = React.forwardRef((props, ref) => (
 
 class App extends React.Component {
     inputRef = React.createRef();
+    state = {};
 
     componentDidMount() {
-        inputRef.current.focus();
+        if (this.inputRef.current) {
+            this.inputRef.current.focus();
+        }
     }
 
     render() {
