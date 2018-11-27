@@ -70,6 +70,16 @@ Aqui é possível verificar como o circulo de loading no canto superior direito 
 ---
 # Novos lifecycles
 <img src={require("file-loader!./assets/lifecycle.jpg")}/>
+
+```notes
+For example, with the current API, it is too easy to block the initial render with non-essential logic. In part this is because there are too many ways to accomplish a given task, and it can be unclear which is best. We’ve observed that the interrupting behavior of error handling is often not taken into consideration and can result in memory leaks (something that will also impact the upcoming async rendering mode). The current class component API also complicates other efforts, like our work on prototyping a React compiler.
+
+Many of these issues are exacerbated by a subset of the component lifecycles (componentWillMount, componentWillReceiveProps, and componentWillUpdate). These also happen to be the lifecycles that cause the most confusion within the React community. For these reasons, we are going to deprecate those methods in favor of better alternatives.
+
+We are adding the following lifecycle aliases: UNSAFE_componentWillMount, UNSAFE_componentWillReceiveProps, and UNSAFE_componentWillUpdate. (Both the old lifecycle names and the new aliases will be supported.)
+
+We are introducing two new lifecycles, static getDerivedStateFromProps and getSnapshotBeforeUpdate.
+```
 ---
 # Stric Mode
 ---
