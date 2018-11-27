@@ -60,7 +60,9 @@ Aqui é possível verificar como o circulo de loading no canto superior direito 
   dark={false}
   steps={[
     {},
-    {tokens: {3: [ 20, 21 ]}, notes: "A função forwardRef passa um `ref` como segundo argumento"}
+    { lines: [3], notes: "forwardRef recebe um componente funcional e passa para ele um `ref` como segundo argumento"},
+    { lines: [4], notes: "Esse ref pode ser passado para outros componentes, React ou nativos"},
+    { range: [18, 23], notes: "O componente pode ser usado normalmente" }
   ]}
 />
 ---
