@@ -62,7 +62,9 @@ Aqui é possível verificar como o circulo de loading no canto superior direito 
     {},
     { lines: [3], notes: "forwardRef recebe um componente funcional e passa para ele um `ref` como segundo argumento"},
     { lines: [4], notes: "Esse ref pode ser passado para outros componentes, React ou nativos"},
-    { range: [18, 23], notes: "O componente pode ser usado normalmente" }
+    { range: [18, 23], notes: "O componente pode ser usado normalmente" },
+    { lines: [4], notes: "Mas o conteúdo do `ref` será o <input/>, já que ele recebeu o `ref` de forwardRef" },
+    { lines: [11], notes: "O que permite que se dê foco ao <input/>" },
   ]}
 />
 ---
