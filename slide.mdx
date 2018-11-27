@@ -48,6 +48,13 @@ Aqui é possível verificar como o circulo de loading no canto superior direito 
 ---
 # React 16.4
 ---
+# Pointer Events
+---
+# "Bugfix" para getDerivedStateFromProps
+```notes
+getDerivedStateFromProps is now called every time a component is rendered, regardless of the cause of the update. Previously, it was only called if the component was re-rendered by its parent, and would not fire as the result of a local setState. This was an oversight in the initial implementation that has now been corrected. The previous behavior was more similar to componentWillReceiveProps, but the improved behavior ensures compatibility with React’s upcoming asynchronous rendering mode.
+```
+---
 # React 16.5
 ---
 # Profiler
