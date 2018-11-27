@@ -29,18 +29,22 @@ Aqui é possível verificar como o circulo de loading no canto superior direito 
 
 <CodeSurfer
   title="Context API"
-  code={require("!raw-loader!./contextApi.jsx")}
-  lang="javascript"
+  code={require("!raw-loader!./samples/contextApi.jsx")}
   showNumbers={false}
   dark={false}
   steps={[
+    {},
     { lines: [1], notes: "Cria o contexto" },
+    { range: [3, 13], notes: "Exemplo de componente que fornece contexto" },
     { range: [8, 10], notes: "Provider" },
+    { range: [15, 23], notes: "Exemplo de componente que consome contexto" },
     { range: [18, 20], notes: "Consumer" },
+    { range: [25, 31], notes: "Exemplo de uso" },
+    { range: [27, 29], notes: "O consumidor deve estar abaixo de um provider na árvore" },
   ]}
 />
 ---
-# createRef API e fowardRef API
+# createRef e fowardRef
 ---
 # Novos lifecycles
 ---

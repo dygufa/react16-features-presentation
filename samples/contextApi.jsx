@@ -21,3 +21,11 @@ class ThemedButton extends React.Component {
         );
     }
 }
+
+function App() {
+    return (
+        <ThemeProvider>
+            <ThemedButton>Clica aqui</ThemedButton>
+        </ThemeProvider>
+    );
+}
