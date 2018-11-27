@@ -3,7 +3,6 @@ import { Head } from "mdx-deck";
 
 export { default as theme } from "./theme";
 
-
 <Head>
     <title>Novidades do React</title>
 </Head>
@@ -14,7 +13,7 @@ export { default as theme } from "./theme";
 
 ## 16.3 - 16.7(alpha)
 
-___
+---
 
 # Contexto
 
@@ -99,7 +98,7 @@ Aqui é possível verificar como o circulo de loading no canto superior direito 
 🙅 UNSAFE_componentWillUpdate  🙅  
 🙅 UNSAFE_componentWillMount  🙅  
 😍 getDerivedStateFromProps  😍  
-😍 getSnapshotBeforeUpdate  😍  
+😍 getSnapshotBeforeUpdate  😍
 
 ```notes
 For example, with the current API, it is too easy to block the initial render with non-essential logic. In part this is because there are too many ways to accomplish a given task, and it can be unclear which is best. We’ve observed that the interrupting behavior of error handling is often not taken into consideration and can result in memory leaks (something that will also impact the upcoming async rendering mode). The current class component API also complicates other efforts, like our work on prototyping a React compiler.
@@ -113,16 +112,15 @@ We are introducing two new lifecycles, static getDerivedStateFromProps and getSn
 getDerivedStateFromProps is being added as a safer alternative to the legacy componentWillReceiveProps. (Note that in most cases you don’t need either of them.)
 getSnapshotBeforeUpdate is being added to support safely reading properties from e.g. the DOM before updates are made.
 ```
+
 ---
+
 <CodeSurfer
-  title="getDerivedStateFromProps"
-  code={require("!raw-loader!./samples/getDerivedStateFromProps.jsx")}
-  showNumbers={false}
-  dark={false}
-  steps={[
-    {},
-    {range: [7, 15]}
-  ]}
+    title="getDerivedStateFromProps"
+    code={require("!raw-loader!./samples/getDerivedStateFromProps.jsx")}
+    showNumbers={false}
+    dark={false}
+    steps={[{}, { range: [7, 15] }]}
 />
 
 ```notes
@@ -134,18 +132,16 @@ If you need to perform a side effect (for example, data fetching or an animation
 If you want to re-compute some data only when a prop changes, use a memoization helper instead.
 
 If you want to “reset” some state when a prop changes, consider either making a component fully controlled or fully uncontrolled with a key instead.
-``` 
+```
+
 ---
+
 <CodeSurfer
-  title="getSnapshotBeforeUpdate"
-  code={require("!raw-loader!./samples/getSnapshotBeforeUpdate.jsx")}
-  showNumbers={false}
-  dark={false}
-  steps={[
-    {},
-    {range: [7, 13]},
-    {range: [15, 20]}
-  ]}
+    title="getSnapshotBeforeUpdate"
+    code={require("!raw-loader!./samples/getSnapshotBeforeUpdate.jsx")}
+    showNumbers={false}
+    dark={false}
+    steps={[{}, { range: [7, 13] }, { range: [15, 20] }]}
 />
 
 ```notes
@@ -157,7 +153,7 @@ If you need to perform a side effect (for example, data fetching or an animation
 If you want to re-compute some data only when a prop changes, use a memoization helper instead.
 
 If you want to “reset” some state when a prop changes, consider either making a component fully controlled or fully uncontrolled with a key instead.
-``` 
+```
 
 ---
 
@@ -180,25 +176,39 @@ StrictMode atualmente ajuda com:
 ```
 
 ---
+
 # React 16.4
+
 ---
+
 # Pointer Events
+
 ```notes
 Pointer events are DOM events that are fired for a pointing device. They are designed to create a single DOM event model to handle pointing input devices such as a mouse, pen/stylus or touch (such as one or more fingers).
 ```
+
 ---
+
 # "Bugfix" para getDerivedStateFromProps
+
 ```notes
 getDerivedStateFromProps is now called every time a component is rendered, regardless of the cause of the update. Previously, it was only called if the component was re-rendered by its parent, and would not fire as the result of a local setState. This was an oversight in the initial implementation that has now been corrected. The previous behavior was more similar to componentWillReceiveProps, but the improved behavior ensures compatibility with React’s upcoming asynchronous rendering mode.
 ```
+
 ---
+
 # React 16.5
+
 ---
+
 # Profiler
+
 <img src={require("file-loader!./assets/profiler.png")}/>
----
+
 # React 16.6
+
 ---
+
 <CodeSurfer
   title="React.memo"
   code={require("!raw-loader!./samples/memo.jsx")}
@@ -236,6 +246,7 @@ Class components can bail out from rendering when their input props are the same
 ```notes
 We’ve heard feedback that adopting the new render prop API can be difficult in class components. So we’ve add a convenience API to consume a context value from within a class component.
 ```
+
 ---
 
 # React 16.7 (alpha)
@@ -243,87 +254,105 @@ We’ve heard feedback that adopting the new render prop API can be difficult in
 ---
 
 # Hooks
+
 ![Loving Hooks](https://media.giphy.com/media/Hf0tK0lqL3tIc/giphy.gif)
 
 ---
 
 # Os Problemas
 
-  * Classes. (tem que acabar)
+-   Classes. (tem que acabar)
 
-  * Reuso de lógica de estado.
+-   Reuso de lógica de estado.
 
-  * Rios de lifecycle methods.
+-   Rios de lifecycle methods.
 
 ---
 
 <CodeSurfer
-  title="A Solução"
-  code={require("!raw-loader!./samples/hooks-basic.jsx")}
-  showNumbers={false}
-  dark={false}
+    title="A Solução"
+    code={require("!raw-loader!./samples/hooks-basic.jsx")}
+    showNumbers={false}
+    dark={false}
 />
 
 ---
 
-# Maravilhas
+# Maravilhas extras
 
-  😍 Nada vai quebrar 😍
-  😍 Menos verbosidade (bonus: transpilação) 😍
-  😍  😍
+😍 Nada vai quebrar 😍
 
----
+😍 Menos verbosidade (bonus: transpilação) 😍
 
-# Default Hooks
-  * useState
-  * useEffect
-  * useContext
+😍  😍
 
 ---
 
-<CodeSurfer
-  title="useEffect"
-  code={require("!raw-loader!./samples/useEffect.jsx")}
-  showNumbers={false}
-  dark={false}
-  steps={[
-    {},
-    {range: [10, 15], notes: 'Inscrição e desinscrição no evento'},
-  ]}
-/>  
+# Principais Hooks
+
+-   useState
+-   useEffect
+-   useContext
 
 ---
 
 <CodeSurfer
-  title="useContext"
-  code={require("!raw-loader!./samples/useContext.jsx")}
-  showNumbers={false}
-  dark={false}
-  steps={[
-    {},
-    {range: [13, 16], notes: 'Consumindo o contexto'}
-  ]}
-/>  
+    title="useEffect"
+    code={require("!raw-loader!./samples/useEffect.jsx")}
+    showNumbers={false}
+    dark={false}
+    steps={[
+        {},
+        { range: [10, 15], notes: "Inscrição e desinscrição no evento" },
+    ]}
+/>
+
+---
+
+<CodeSurfer
+    title="useContext"
+    code={require("!raw-loader!./samples/useContext.jsx")}
+    showNumbers={false}
+    dark={false}
+    steps={[{}, { range: [13, 16], notes: "Consumindo o contexto" }]}
+/>
 
 ---
 
 # Hooks adicionais
-  * useReducer
-  * useCallback
-  * useRef
-  * useMemo
 
-___
+-   useReducer
+-   useCallback
+-   useRef
+-   useMemo
+-   useImperativeMethods
+-   useLayoutEffects
+-   useMutationEffects
+
+---
 
 # Custom Hooks
+
 ## Render props && HOCs vs Hooks
 
 ---
 
+# Exemplinho
+
+<iframe 
+  src="https://codesandbox.io/embed/yqnpq6yrlx"
+  style={{
+     width: 1200,
+     height: 600,
+     border: 0,
+     borderRadius: 4, 
+     overflow: 'hidden'
+  }}
+  sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+
+---
+
 # Concurrent React
-
-
-
 
 ---
 
