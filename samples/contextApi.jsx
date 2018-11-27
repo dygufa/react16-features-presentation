@@ -1,7 +1,7 @@
-const ThemeContext = React.createContext('light');
+const ThemeContext = React.createContext("light");
 
 class ThemeProvider extends React.Component {
-    state = { theme: 'light' };
+    state = { theme: "light" };
 
     render() {
         return (
