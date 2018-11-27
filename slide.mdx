@@ -1,3 +1,5 @@
+import { CodeSurfer } from "mdx-deck-code-surfer";
+
 # React
 16.3 - 16.7(alpha)
 ---
@@ -24,7 +26,19 @@ Aqui é possível verificar como o circulo de loading no canto superior direito 
 ---
 # React 16.3
 ---
-# Context API
+
+<CodeSurfer
+  title="Context API"
+  code={require("!raw-loader!./contextApi.jsx")}
+  lang="javascript"
+  showNumbers={false}
+  dark={false}
+  steps={[
+    { lines: [1], notes: "Cria o contexto" },
+    { range: [8, 10], notes: "Provider" },
+    { range: [18, 20], notes: "Consumer" },
+  ]}
+/>
 ---
 # createRef API e fowardRef API
 ---

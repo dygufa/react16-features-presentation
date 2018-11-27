@@ -7,6 +7,11 @@
   },
   "dependencies": {
     "file-loader": "^2.0.0",
-    "react-twitter-embed": "^2.0.4"
+    "mdx-deck-code-surfer": "^0.5.3",
+    "raw-loader": "^0.5.1",
+    "react-live": "^1.12.0",
+    "react-syntax-highlighter": "^10.1.1",
+    "react-twitter-embed": "^2.0.4",
+    "text-loader": "^0.0.1"
   }
 }
