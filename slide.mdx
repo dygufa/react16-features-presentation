@@ -151,7 +151,25 @@ If you want to “reset” some state when a prop changes, consider either makin
 ``` 
 
 ---
-# Strict Mode
+
+# StrictMode
+
+Componente que não renderiza nada e ativa alertas de uso de features que estão ou serão depreciadas
+
+```js
+const App = () => <StrictMode>{/* resto do app */}</StrictMode>;
+```
+
+```notes
+StrictMode atualmente ajuda com:
+
+-   Identificar componentes usando ciclos de vida que serão depreciados
+-   Alertar sobre uso de API legada de ref com strings
+-   Alertar sobre uso de `findDOMNOde`, que foi depreciado
+-   Detectar efeitos colaterais inesperados
+-   Detectar uso de API legada de contexto
+```
+
 ---
 # React 16.4
 ---
