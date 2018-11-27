@@ -14,7 +14,7 @@ Presentation for the 10th React Salvador Meetup touching the following topics:
 -   Code-Splitting Suspense
 -   Hooks
 
-Check the presentation out on:
+## [Preview here](https://dygufa.com/react16-features-presentation/dist/#0)
 
 ## Run locally
 
