@@ -702,7 +702,7 @@ babel-plugin-check-es2015-constants@^6.22.0:
   dependencies:
     babel-runtime "^6.22.0"
 
-babel-plugin-styled-components@^1.8.0:
+babel-plugin-styled-components@1.8.0:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-styled-components/-/babel-plugin-styled-components-1.8.0.tgz#9dd054c8e86825203449a852a5746f29f2dab857"
   integrity sha512-PcrdbXFO/9Plo9JURIj8G0Dsz+Ct8r+NvjoLh6qPt8Y/3EIAj1gHGW1ocPY1IkQbXZLBEZZSRBAxJem1KFdBXg==
@@ -3939,10 +3939,10 @@ mdx-deck-code-surfer@^0.5.3:
     code-surfer "^0.5.3"
     memoize-one "^4.0.2"
 
-mdx-deck@^1.7.14:
-  version "1.7.14"
-  resolved "https://registry.yarnpkg.com/mdx-deck/-/mdx-deck-1.7.14.tgz#e82fbbbf7737c73f60d7b4b7544cdee36c6d4824"
-  integrity sha512-nll6iCDZ8pPB9fJIeucGC6Z7lycKrUeGE4ANVWO1Y2QGDTOkap6UjWQnwLSE4BzL26X0OpY4wRJS0LkQjj4l+Q==
+mdx-deck@1.8.0:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/mdx-deck/-/mdx-deck-1.8.0.tgz#314061af05bbdbc98f2c18c67cdd775e669e2f4e"
+  integrity sha512-Tmd4IdUAjRkxOd0+N8LcD+wNhHMDI4vzcWs9ok+c/CYT8NTnfJ71kkIG91xKqdE2jjJWPmDht+/0L3DxML78Vg==
   dependencies:
     "@compositor/webfont" "^1.0.39"
     "@mdx-js/mdx" "^0.15.7"
@@ -3950,7 +3950,7 @@ mdx-deck@^1.7.14:
     ansi-html "0.0.7"
     babel-core "^6.26.3"
     babel-loader "^7.1.5"
-    babel-plugin-styled-components "^1.8.0"
+    babel-plugin-styled-components "1.8.0"
     babel-preset-env "^1.7.0"
     babel-preset-react "^6.24.1"
     babel-preset-stage-0 "^6.24.1"

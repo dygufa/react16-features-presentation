@@ -1,9 +1,10 @@
 {
   "scripts": {
-    "start": "mdx-deck slide.mdx"
+    "start": "mdx-deck slide.mdx",
+    "build": "mdx-deck build deck.mdx"
   },
   "devDependencies": {
-    "mdx-deck": "^1.7.14"
+    "mdx-deck": "1.8.0"
   },
   "dependencies": {
     "file-loader": "^2.0.0",
