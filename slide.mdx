@@ -3,15 +3,18 @@ import { Head } from "mdx-deck";
 
 export { default as theme } from "./theme";
 
+
 <Head>
     <title>Novidades do React</title>
 </Head>
+
+---
 
 # React
 
 ## 16.3 - 16.7(alpha)
 
----
+___
 
 # Contexto
 
@@ -77,7 +80,7 @@ Aqui é possível verificar como o circulo de loading no canto superior direito 
 />
 ---
 <CodeSurfer
-  title="fowardRef"
+  title="forwardRef"
   code={require("!raw-loader!./samples/forwardRef.jsx")}
   showNumbers={false}
   dark={false}
@@ -196,7 +199,6 @@ getDerivedStateFromProps is now called every time a component is rendered, regar
 ---
 # React 16.6
 ---
-# React.memo
 <CodeSurfer
   title="React.memo"
   code={require("!raw-loader!./samples/memo.jsx")}
@@ -234,7 +236,6 @@ Class components can bail out from rendering when their input props are the same
 ```notes
 We’ve heard feedback that adopting the new render prop API can be difficult in class components. So we’ve add a convenience API to consume a context value from within a class component.
 ```
-
 ---
 
 # React 16.7 (alpha)
@@ -242,18 +243,87 @@ We’ve heard feedback that adopting the new render prop API can be difficult in
 ---
 
 # Hooks
+![Loving Hooks](https://media.giphy.com/media/Hf0tK0lqL3tIc/giphy.gif)
 
 ---
 
-# O Problema
+# Os Problemas
+
+  * Classes. (tem que acabar)
+
+  * Reuso de lógica de estado.
+
+  * Rios de lifecycle methods.
 
 ---
 
-# A Solução
+<CodeSurfer
+  title="A Solução"
+  code={require("!raw-loader!./samples/hooks-basic.jsx")}
+  showNumbers={false}
+  dark={false}
+/>
+
+---
+
+# Maravilhas
+
+  😍 Nada vai quebrar 😍
+  😍 Menos verbosidade (bonus: transpilação) 😍
+  😍  😍
+
+---
+
+# Default Hooks
+  * useState
+  * useEffect
+  * useContext
+
+---
+
+<CodeSurfer
+  title="useEffect"
+  code={require("!raw-loader!./samples/useEffect.jsx")}
+  showNumbers={false}
+  dark={false}
+  steps={[
+    {},
+    {range: [10, 15], notes: 'Inscrição e desinscrição no evento'},
+  ]}
+/>  
+
+---
+
+<CodeSurfer
+  title="useContext"
+  code={require("!raw-loader!./samples/useContext.jsx")}
+  showNumbers={false}
+  dark={false}
+  steps={[
+    {},
+    {range: [13, 16], notes: 'Consumindo o contexto'}
+  ]}
+/>  
+
+---
+
+# Hooks adicionais
+  * useReducer
+  * useCallback
+  * useRef
+  * useMemo
+
+___
+
+# Custom Hooks
+## Render props && HOCs vs Hooks
 
 ---
 
 # Concurrent React
+
+
+
 
 ---
 
