@@ -1,13 +1,17 @@
 import { CodeSurfer } from "mdx-deck-code-surfer";
 
 # React
-16.3 - 16.7(alpha)
----
+
+## 16.3 - 16.7(alpha)
+
 # Contexto
-(não a API de contexto, contexto mesmo, tipo contextualizar)
----
+
+## (não a API de contexto, contexto mesmo, tipo contextualizar)
+
 # React 16.0, Fiber, async rendering
+
 ---
+
 <img src={require("file-loader!./assets/stack_reconciliation.png")}/>
 <p style={{ fontSize: "0.6em"}}>(Stack reconciliation — é preciso terminar a atualização antes de retornar para a main thread (crédito: Lin Clark))</p>
 ---
@@ -16,15 +20,16 @@ import { CodeSurfer } from "mdx-deck-code-surfer";
 ---
 import { TwitterTweetEmbed } from "react-twitter-embed";
 
-<TwitterTweetEmbed
-  tweetId={"909926793536094209"}
-/>
+<TwitterTweetEmbed tweetId={"909926793536094209"} />
 
 ```notes
 Aqui é possível verificar como o circulo de loading no canto superior direito para de ser renderizado enquanto a àrvore de componentes é montada
 ```
+
 ---
+
 # React 16.3
+
 ---
 
 <CodeSurfer
@@ -44,7 +49,15 @@ Aqui é possível verificar como o circulo de loading no canto superior direito 
   ]}
 />
 ---
-# createRef e fowardRef
+<CodeSurfer
+  title="createRef e fowardRef"
+  code={require("!raw-loader!./samples/ref.jsx")}
+  showNumbers={false}
+  dark={false}
+  steps={[
+    {},
+  ]}
+/>
 ---
 # Novos lifecycles
 ---
