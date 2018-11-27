@@ -332,13 +332,53 @@ We’ve heard feedback that adopting the new render prop API can be difficult in
 
 # Concurrent React
 
-
-
+-   Time slicing
+-   Suspense
 
 ---
 
 # Time-slicing
 
+-   Usa divisão de trabalho do React Fiber para não bloquear a main thread
+-   Dá diferentes prioridades para diferentes atualizações (atualizações envolvendo _input_ são priorizadas)
+-   Bônus: React vai usar propriedade `hidden` do HTML5 para despriorizar renderização de parte da árvore
+
+---
+
+# Time-slicing
+
+## Demo
+
+<iframe
+    src="https://timeslicing-unstable-demo.surge.sh/"
+    width="800"
+    height="520"
+/>
+
 ---
 
 # Suspense
+
+## API para lidar facilmente com chamadas assíncronas
+
+-   Suspende renderização se dados não estão disponíveis em cache
+-   Exibe fallback depois de timeout
+-   Continua renderização quando chamadas assíncronas são concluídas
+
+---
+
+# Suspense
+
+## Demo
+
+<iframe
+    src="https://codesandbox.io/embed/w0n9ok3mqw?hidenavigation=1&view=preview"
+    width="800"
+    height="500"
+    style={{
+        border: 0,
+        borderRadius: "4px",
+        overflow: "hidden",
+    }}
+    sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
+/>
