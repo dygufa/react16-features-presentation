@@ -6,4 +6,10 @@ export default {
     prism: {
         style: okaidia,
     },
+    colors: {
+        ...theme.colors,
+        text: 'palevioletred',
+        background: 'papayawhip',
+        link: 'lightblue'
+    },
 };
