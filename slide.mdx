@@ -65,14 +65,48 @@ getDerivedStateFromProps is now called every time a component is rendered, regar
 # React 16.5
 ---
 # Profiler
+<img src={require("file-loader!./assets/profiler.png")}/>
 ---
 # React 16.6
 ---
 # React.memo
+<CodeSurfer
+  title="React.memo"
+  code={require("!raw-loader!./samples/memo.jsx")}
+  showNumbers={false}
+  dark={false}
+  steps={[
+    { range: [1, 5], notes: "Como é em classes" },
+    { range: [7, 9], notes: "E agora a nova feature para funções..." },
+  ]}
+/>
+```notes
+Class components can bail out from rendering when their input props are the same using PureComponent or shouldComponentUpdate. Now you can do the same with function components by wrapping them in React.memo.
+```
 ---
-# Code-Splitting Suspense
+<CodeSurfer
+  title="Code-Splitting Suspense"
+  code={require("!raw-loader!./samples/code-splitting-suspense.jsx")}
+  showNumbers={false}
+  dark={false}
+/>
 ---
-# ContextType
+<CodeSurfer
+  title="ContextType"
+  code={require("!raw-loader!./samples/static-context-type.jsx")}
+  showNumbers={false}
+  dark={false}
+  steps={[
+    {},
+    { lines: [1], notes: "Instância do contexto" },
+    { lines: [4], notes: "Atribuição do contexto" },
+    { lines: [6], notes: "Consultando contexto" },
+  ]}
+/>
+
+```notes
+We’ve heard feedback that adopting the new render prop API can be difficult in class components. So we’ve add a convenience API to consume a context value from within a class component.
+```
 ---
 # React 16.7 (alpha)
 ---
