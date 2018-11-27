@@ -54,6 +54,22 @@ Aqui é possível verificar como o circulo de loading no canto superior direito 
 />
 ---
 <CodeSurfer
+  title="createRef"
+  code={require("!raw-loader!./samples/createRef.jsx")}
+  showNumbers={false}
+  dark={false}
+  steps={[
+    {},
+    { range: [3, 28], notes: "Até então, para se consumir referências a elementos da DOM ou outros componentes React, usava-se callback refs" },
+    { lines: [19], notes: "Nele, a propriedade ref espera uma função que recebe a referência ou null (quando se desmonta o componente)" },
+    { range: [30, 55], notes: "O createRef é uma nova API que simplifica o acesso a referências" },
+    { lines: [32], notes: "Para usar, se cria um objeto Ref de antemão" },
+    { lines: [46], notes: "O objeto é passado pra propriedade ref" },
+    { range: [36, 38], notes: "E a referência pode ser acessada na propriedade current do objeto Ref" }
+  ]}
+/>
+---
+<CodeSurfer
   title="fowardRef"
   code={require("!raw-loader!./samples/forwardRef.jsx")}
   showNumbers={false}
@@ -62,9 +78,9 @@ Aqui é possível verificar como o circulo de loading no canto superior direito 
     {},
     { lines: [3], notes: "forwardRef recebe um componente funcional e passa para ele um `ref` como segundo argumento"},
     { lines: [4], notes: "Esse ref pode ser passado para outros componentes, React ou nativos"},
-    { range: [18, 23], notes: "O componente pode ser usado normalmente" },
+    { range: [21, 27], notes: "O componente pode ser usado normalmente" },
     { lines: [4], notes: "Mas o conteúdo do `ref` será o <input/>, já que ele recebeu o `ref` de forwardRef" },
-    { lines: [11], notes: "O que permite que se dê foco ao <input/>" },
+    { lines: [13], notes: "O que permite que se dê foco ao <input/> 🎉" },
   ]}
 />
 ---
@@ -81,7 +97,7 @@ We are adding the following lifecycle aliases: UNSAFE_componentWillMount, UNSAFE
 We are introducing two new lifecycles, static getDerivedStateFromProps and getSnapshotBeforeUpdate.
 ```
 ---
-# Stric Mode
+# Strict Mode
 ---
 # React 16.4
 ---
