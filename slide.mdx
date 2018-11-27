@@ -54,6 +54,22 @@ Aqui é possível verificar como o circulo de loading no canto superior direito 
 />
 ---
 <CodeSurfer
+  title="createRef"
+  code={require("!raw-loader!./samples/createRef.jsx")}
+  showNumbers={false}
+  dark={false}
+  steps={[
+    {},
+    { range: [3, 28], notes: "Até então, para se consumir referências a elementos da DOM ou outros componentes React, usava-se callback refs" },
+    { lines: [19], notes: "Nele, a propriedade ref espera uma função que recebe a referência ou null (quando se desmonta o componente)" },
+    { range: [30, 55], notes: "O createRef é uma nova API que simplifica o acesso a referências" },
+    { lines: [32], notes: "Para usar, se cria um objeto Ref de antemão" },
+    { lines: [46], notes: "O objeto é passado pra propriedade ref" },
+    { range: [36, 38], notes: "E a referência pode ser acessada na propriedade current do objeto Ref" }
+  ]}
+/>
+---
+<CodeSurfer
   title="fowardRef"
   code={require("!raw-loader!./samples/forwardRef.jsx")}
   showNumbers={false}
